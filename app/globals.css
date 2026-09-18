@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050506;
+  --foreground: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter-tight);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.22);
+  color: #fff;
+}
+
+.case-study-dialog {
+  color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: #b76b3b #18181b;
+  scrollbar-gutter: stable;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .case-study-dialog {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
+
+  .case-study-dialog::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .case-study-dialog::-webkit-scrollbar-track {
+    margin-block: 24px;
+    border-radius: 999px;
+    background: #18181b;
+  }
+
+  .case-study-dialog::-webkit-scrollbar-thumb {
+    min-height: 48px;
+    border: 2px solid #18181b;
+    border-radius: 999px;
+    background: #b76b3b;
+  }
+
+  .case-study-dialog::-webkit-scrollbar-thumb:hover {
+    background: #fdba74;
+  }
+
+  .case-study-dialog::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .case-study-dialog::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
