@@ -49,7 +49,7 @@ export default function RootLayout({
       lang="en"
       className={`${interTight.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[#050506] text-white font-sans">
+      <body className="min-h-full bg-[#111111] text-white font-sans">
         {children}
       </body>
     </html>

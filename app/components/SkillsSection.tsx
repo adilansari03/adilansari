@@ -39,28 +39,28 @@ const SkillsSection = () => {
     <section
       id="skills"
       ref={skillsRef}
-      className="relative px-6 py-24 sm:px-10 lg:px-14"
+      className="relative px-5 py-14 sm:px-8 sm:py-20 lg:px-14 lg:py-24"
     >
-      <div className="mx-auto max-w-6xl space-y-12">
+      <div className="mx-auto max-w-6xl space-y-8 sm:space-y-12">
         <div className="space-y-4 text-center">
           <p className="skills-heading text-sm font-semibold uppercase tracking-[0.32em] text-orange-300">{skillsData.label}</p>
-          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{skillsData.title}</h2>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-300">{skillsData.description}</p>
+          <h2 className="text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-white [overflow-wrap:anywhere]">{skillsData.title}</h2>
+          <p className="mx-auto max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">{skillsData.description}</p>
         </div>
         <div className="grid gap-3 md:grid-cols-2">
           {skillsData.groups.map((group) => (
             <div
               key={group.title}
-              className="skill-group min-w-0 rounded-2xl bg-white/5 p-6 shadow-lg shadow-black/20 last:md:col-span-2 sm:p-8"
+              className="skill-group min-w-0 rounded-2xl bg-[#202020] p-5 shadow-lg shadow-black/20 last:md:col-span-2 sm:p-8"
             >
-              <h3 className="text-xl font-semibold text-orange-300">
+              <h3 className="text-lg font-semibold text-orange-300 sm:text-xl [overflow-wrap:anywhere]">
                 {group.title}
               </h3>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="skill-bubble max-w-full rounded-3xl bg-white/5 px-5 py-2 text-sm leading-6  font-medium text-gray-400"
+                    className="skill-bubble max-w-full rounded-2xl bg-white/5 px-3 py-2 text-sm leading-6 font-medium [overflow-wrap:anywhere] sm:px-4 text-gray-400"
                   >
                     {skill}
                   </li>

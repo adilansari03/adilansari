@@ -686,6 +686,39 @@ export const featuredWorkData = {
   ],
 };
 
+export const contactData = {
+  label: "Contact",
+  title: "Let’s build something together.",
+  description:
+    "Have a project in mind? Get in touch to discuss design and frontend development.",
+  links: [
+    {
+      type: "phone",
+      label: "Phone",
+      value: "+91 7607252198",
+      href: "tel:+917607252198",
+    },
+    {
+      type: "email",
+      label: "Email",
+      value: "adilansari760725@gmail.com",
+      href: "mailto:adilansari760725@gmail.com",
+    },
+    {
+      type: "linkedin",
+      label: "LinkedIn",
+      value: "Aadil Ansari",
+      href: "https://www.linkedin.com/in/aadil-ansari-b329b623a/",
+    },
+    {
+      type: "github",
+      label: "GitHub",
+      value: "adilansari03",
+      href: "https://github.com/adilansari03",
+    },
+  ],
+} as const;
+
 export const footerData = {
-  text: "© 2026 Aadil Ansari. Built with Next.js, Tailwind CSS, and GSAP.",
+  text: "© 2026 Aadil Ansari. Built with Next.js, Tailwind CSS.",
 };

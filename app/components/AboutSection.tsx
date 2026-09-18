@@ -38,28 +38,28 @@ const AboutSection = () => {
     <section
       id="about"
       ref={aboutRef}
-      className="relative px-6 py-24 sm:px-10 lg:px-14"
+      className="relative px-5 py-14 sm:px-8 sm:py-20 lg:px-14 lg:py-24"
     >
-      <div className="mx-auto max-w-3xl space-y-14">
+      <div className="mx-auto max-w-3xl space-y-8 sm:space-y-12">
         <div className="space-y-6">
           <p className="about-heading text-sm font-semibold uppercase tracking-[0.32em] text-orange-300">{aboutData.label}</p>
-          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{aboutData.title}</h2>
+          <h2 className="text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-white [overflow-wrap:anywhere]">{aboutData.title}</h2>
           {aboutData.paragraphs.map((paragraph, index) => (
-            <p key={index} className="about-copy max-w-3xl text-lg leading-8 text-slate-300">
+            <p key={index} className="about-copy max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
               {paragraph}
             </p>
           ))}
         </div>
-        <div className="about-cards grid gap-2 sm:grid-cols-4">
+        <div className="about-cards grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {aboutData.highlights.map((item) => (
             <div
               key={item.label}
-              className="rounded-xl bg-white/5 p-6 text-white/90 shadow-lg shadow-black/20 backdrop-blur-xl"
+              className="min-w-0 rounded-xl bg-[#202020] p-5 text-white/90 shadow-lg shadow-black/20 backdrop-blur-xl"
             >
-              <p className="text-[12px] uppercase tracking-[0.24em] text-gray-400">
+              <p className="text-xs uppercase tracking-[0.12em] text-gray-400">
                 {item.label}
               </p>
-              <p className="mt-4 text-md leading-5 tracking-[0.05em] font-medium">
+              <p className="mt-3 text-base leading-6 font-medium [overflow-wrap:anywhere]">
                 {item.value}
               </p>
             </div>

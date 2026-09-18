@@ -13,7 +13,7 @@ export default function HeroSection() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-20 sm:opacity-30 lg:opacity-40"
       >
         <Image
           src={heroData.backgroundImage}
@@ -29,13 +29,13 @@ export default function HeroSection() {
       />
 
       <div className="mx-auto grid max-w-[1600px] lg:min-h-[min(900px,100svh)] lg:grid-cols-[45%_55%] relative isolate z-0">
-        <div className="relative min-w-0 px-6 pt-16 pb-8 sm:px-10 sm:pt-20 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:justify-center lg:py-20 lg:pr-12 lg:pl-4 xl:pr-16">
-          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-white/80">
+        <div className="relative min-w-0 px-5 pt-12 pb-0 sm:px-8 sm:pt-16 sm:pb-8 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:justify-center lg:py-20 lg:pr-12 lg:pl-4 xl:pr-16">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] sm:mb-6 sm:text-sm sm:tracking-[0.25em] text-white/80">
             {heroData.name}
           </p>
           <h1
             id="hero-title"
-            className="hero-title text-[clamp(2.25rem,6.75vw,4rem)] font-black uppercase leading-[.9] tracking-[-0.03em] text-white lg:text-[clamp(2.75rem,4.5vw,4.5rem)]"
+            className="hero-title text-[clamp(2rem,7vw,4rem)] font-black uppercase leading-[1.02] [overflow-wrap:anywhere] tracking-[-0.03em] text-white lg:text-[clamp(2.75rem,4.5vw,4.5rem)]"
           >
             {heroData.titleLines.map((line, index) => (
               <span key={index} className="block">
@@ -44,8 +44,8 @@ export default function HeroSection() {
             ))}
           </h1>
 
-          <div className="mt-8 w-full max-w-md sm:mt-10">
-            <p className="hero-desc max-w-sm text-lg leading-tight text-white/90 sm:text-xl lg:text-2xl">
+          <div className="mt-6 w-full max-w-md sm:mt-8 lg:mt-10">
+            <p className="hero-desc max-w-sm text-base leading-relaxed text-white/90 sm:text-lg lg:text-2xl">
               {heroData.description}
             </p>
             <svg
@@ -53,7 +53,7 @@ export default function HeroSection() {
               focusable="false"
               viewBox="0 0 531 167"
               fill="none"
-              className="pointer-events-none relative -z-10 mt-6 hidden h-auto w-full sm:block ms-[-50%]"
+              className="pointer-events-none relative -z-10 mt-6 hidden h-auto w-full lg:block lg:ms-[-50%]"
             >
               <path d="M0 166H522V22" stroke="white" strokeOpacity="0.5" />
               <circle cx="522" cy="9" r="9" fill="white" fillOpacity="0.2" />
@@ -62,14 +62,14 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="hero-image pointer-events-none relative h-[clamp(20rem,80vw,34rem)] min-w-0 lg:col-start-1 lg:row-start-1 lg:h-auto lg:min-h-[640px]">
+        <div className="hero-image pointer-events-none relative -mt-6 h-[clamp(22rem,100vw,32rem)] min-w-0 sm:mt-0 sm:h-[clamp(24rem,72vw,32rem)] lg:col-start-1 lg:row-start-1 lg:h-auto lg:min-h-[600px]">
           <Image
             src={heroData.portrait.src}
             alt={heroData.portrait.alt}
             fill
             preload
             sizes="(min-width: 1600px) 720px, (min-width: 1024px) 45vw, 100vw"
-            className="select-none object-contain object-bottom"
+            className="select-none object-cover object-top sm:object-contain sm:object-bottom"
           />
         </div>
       </div>
